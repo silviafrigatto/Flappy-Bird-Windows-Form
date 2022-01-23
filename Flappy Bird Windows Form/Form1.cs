@@ -16,7 +16,7 @@ namespace Flappy_Bird_Windows_Form
         // Game variables
 
         int pipeSpeed = 8;
-        int gravity = 15;
+        int gravity = 10;
         int score = 0;
         
         public gameScreen()
@@ -29,6 +29,8 @@ namespace Flappy_Bird_Windows_Form
         private void gameTimerEvent(object sender, EventArgs e)
         {
             flappyBird.Top += gravity;
+            pipeBottom.Left -= pipeSpeed;
+            pipeTop.Left -= pipeSpeed;
         }
 
         private void gameKeyIsDown(object sender, KeyEventArgs e)
@@ -36,7 +38,7 @@ namespace Flappy_Bird_Windows_Form
 
             if (e.KeyCode == Keys.Space)
             {
-                gravity = -15;
+                gravity = -10;
             }
 
         }
@@ -46,7 +48,7 @@ namespace Flappy_Bird_Windows_Form
 
             if (e.KeyCode == Keys.Space)
             {
-                gravity = 15;
+                gravity = 10;
             }
 
         }
