@@ -24,15 +24,32 @@ namespace Flappy_Bird_Windows_Form
             InitializeComponent();
         }
 
-
-        // Game methods
         private void gameTimerEvent(object sender, EventArgs e)
         {
+            
+            // Moving the bird and pipes 
+
             flappyBird.Top += gravity;
             pipeBottom.Left -= pipeSpeed;
             pipeTop.Left -= pipeSpeed;
+
+            
+            // Spawning the pipes
+
+            if(pipeBottom.Left < -100)
+            {
+                pipeBottom.Left = 600;
+            }
+
+            if(pipeTop.Left < -120)
+            {
+                pipeTop.Left = 620;
+            }
+
         }
 
+        
+        // Game key configuration
         private void gameKeyIsDown(object sender, KeyEventArgs e)
         {
 
