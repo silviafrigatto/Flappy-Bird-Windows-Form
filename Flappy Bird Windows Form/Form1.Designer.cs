@@ -43,6 +43,7 @@
             // 
             // flappyBird
             // 
+            this.flappyBird.BackColor = System.Drawing.Color.Transparent;
             this.flappyBird.Image = global::Flappy_Bird_Windows_Form.Properties.Resources.bird;
             this.flappyBird.Location = new System.Drawing.Point(39, 245);
             this.flappyBird.Name = "flappyBird";
@@ -84,6 +85,7 @@
             // scoreText
             // 
             this.scoreText.AutoSize = true;
+            this.scoreText.BackColor = System.Drawing.Color.Transparent;
             this.scoreText.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.scoreText.Location = new System.Drawing.Point(12, 9);
             this.scoreText.Name = "scoreText";
@@ -103,11 +105,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(504, 547);
+            this.Controls.Add(this.flappyBird);
             this.Controls.Add(this.scoreText);
             this.Controls.Add(this.ground);
             this.Controls.Add(this.pipeBottom);
             this.Controls.Add(this.pipeTop);
-            this.Controls.Add(this.flappyBird);
             this.Name = "gameScreen";
             this.Text = "Flappy Bird";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gameKeyIsDown);

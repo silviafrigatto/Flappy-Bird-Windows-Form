@@ -33,17 +33,23 @@ namespace Flappy_Bird_Windows_Form
             pipeBottom.Left -= pipeSpeed;
             pipeTop.Left -= pipeSpeed;
 
+            // Displying the score
+
+            scoreText.Text = "Score: " + score.ToString();
+
             
             // Spawning the pipes
 
             if(pipeBottom.Left < -100)
             {
                 pipeBottom.Left = 600;
+                score++;
             }
 
             if(pipeTop.Left < -120)
             {
-                pipeTop.Left = 620;
+                pipeTop.Left = 720;
+                score++;
             }
 
         }
