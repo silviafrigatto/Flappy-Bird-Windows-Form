@@ -35,6 +35,7 @@
             this.ground = new System.Windows.Forms.PictureBox();
             this.scoreText = new System.Windows.Forms.Label();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
+            this.gameOverText = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.flappyBird)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pipeTop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pipeBottom)).BeginInit();
@@ -86,10 +87,10 @@
             // 
             this.scoreText.AutoSize = true;
             this.scoreText.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.scoreText.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scoreText.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.scoreText.Location = new System.Drawing.Point(0, 0);
             this.scoreText.Name = "scoreText";
-            this.scoreText.Size = new System.Drawing.Size(154, 39);
+            this.scoreText.Size = new System.Drawing.Size(131, 33);
             this.scoreText.TabIndex = 4;
             this.scoreText.Text = "Score: 0";
             // 
@@ -99,17 +100,29 @@
             this.gameTimer.Interval = 20;
             this.gameTimer.Tick += new System.EventHandler(this.gameTimerEvent);
             // 
+            // gameOverText
+            // 
+            this.gameOverText.AutoSize = true;
+            this.gameOverText.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.gameOverText.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gameOverText.Location = new System.Drawing.Point(257, 221);
+            this.gameOverText.Name = "gameOverText";
+            this.gameOverText.Size = new System.Drawing.Size(206, 39);
+            this.gameOverText.TabIndex = 5;
+            this.gameOverText.Text = "Game Over";
+            // 
             // gameScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(678, 547);
-            this.Controls.Add(this.flappyBird);
             this.Controls.Add(this.scoreText);
             this.Controls.Add(this.ground);
-            this.Controls.Add(this.pipeBottom);
             this.Controls.Add(this.pipeTop);
+            this.Controls.Add(this.pipeBottom);
+            this.Controls.Add(this.gameOverText);
+            this.Controls.Add(this.flappyBird);
             this.Name = "gameScreen";
             this.Text = "Flappy Bird";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gameKeyIsDown);
@@ -131,6 +144,7 @@
         private System.Windows.Forms.PictureBox ground;
         private System.Windows.Forms.Label scoreText;
         private System.Windows.Forms.Timer gameTimer;
+        private System.Windows.Forms.Label gameOverText;
     }
 }
 

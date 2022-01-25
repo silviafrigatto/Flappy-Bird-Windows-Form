@@ -23,6 +23,7 @@ namespace Flappy_Bird_Windows_Form
         public gameScreen()
         {
             InitializeComponent();
+            gameOverText.Hide();
         }
 
         private void gameTimerEvent(object sender, EventArgs e)
@@ -96,8 +97,7 @@ namespace Flappy_Bird_Windows_Form
         private void endGame()
         {
             gameTimer.Stop();
-            //MessageBox.Show("GAME OVER!");
-            scoreText.Text += " GAME OVER";
+            gameOverText.Show();
         }
     }
 }
