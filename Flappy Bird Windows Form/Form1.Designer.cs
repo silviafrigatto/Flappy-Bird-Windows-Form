@@ -45,7 +45,7 @@
             // 
             this.flappyBird.BackColor = System.Drawing.Color.Transparent;
             this.flappyBird.Image = global::Flappy_Bird_Windows_Form.Properties.Resources.bird;
-            this.flappyBird.Location = new System.Drawing.Point(39, 245);
+            this.flappyBird.Location = new System.Drawing.Point(19, 188);
             this.flappyBird.Name = "flappyBird";
             this.flappyBird.Size = new System.Drawing.Size(62, 51);
             this.flappyBird.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -55,7 +55,7 @@
             // pipeTop
             // 
             this.pipeTop.Image = global::Flappy_Bird_Windows_Form.Properties.Resources.pipedown;
-            this.pipeTop.Location = new System.Drawing.Point(353, -29);
+            this.pipeTop.Location = new System.Drawing.Point(538, -36);
             this.pipeTop.Name = "pipeTop";
             this.pipeTop.Size = new System.Drawing.Size(108, 229);
             this.pipeTop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -65,7 +65,7 @@
             // pipeBottom
             // 
             this.pipeBottom.Image = global::Flappy_Bird_Windows_Form.Properties.Resources.pipe;
-            this.pipeBottom.Location = new System.Drawing.Point(299, 341);
+            this.pipeBottom.Location = new System.Drawing.Point(404, 336);
             this.pipeBottom.Name = "pipeBottom";
             this.pipeBottom.Size = new System.Drawing.Size(108, 173);
             this.pipeBottom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -77,7 +77,7 @@
             this.ground.Image = global::Flappy_Bird_Windows_Form.Properties.Resources.ground;
             this.ground.Location = new System.Drawing.Point(-10, 478);
             this.ground.Name = "ground";
-            this.ground.Size = new System.Drawing.Size(549, 82);
+            this.ground.Size = new System.Drawing.Size(733, 82);
             this.ground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ground.TabIndex = 3;
             this.ground.TabStop = false;
@@ -85,9 +85,9 @@
             // scoreText
             // 
             this.scoreText.AutoSize = true;
-            this.scoreText.BackColor = System.Drawing.Color.Transparent;
+            this.scoreText.BackColor = System.Drawing.Color.WhiteSmoke;
             this.scoreText.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.scoreText.Location = new System.Drawing.Point(12, 9);
+            this.scoreText.Location = new System.Drawing.Point(0, 0);
             this.scoreText.Name = "scoreText";
             this.scoreText.Size = new System.Drawing.Size(154, 39);
             this.scoreText.TabIndex = 4;
@@ -104,7 +104,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.ClientSize = new System.Drawing.Size(504, 547);
+            this.ClientSize = new System.Drawing.Size(678, 547);
             this.Controls.Add(this.flappyBird);
             this.Controls.Add(this.scoreText);
             this.Controls.Add(this.ground);

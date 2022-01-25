@@ -37,6 +37,16 @@ namespace Flappy_Bird_Windows_Form
 
             scoreText.Text = "Score: " + score.ToString();
 
+            // End game
+
+            if(flappyBird.Bounds.IntersectsWith(pipeBottom.Bounds) ||
+               flappyBird.Bounds.IntersectsWith(pipeTop.Bounds) ||
+               flappyBird.Bounds.IntersectsWith(ground.Bounds)) 
+            {
+                endGame();
+            }
+
+
             
             // Spawning the pipes
 
@@ -74,6 +84,11 @@ namespace Flappy_Bird_Windows_Form
                 gravity = 10;
             }
 
+        }
+
+        private void endGame()
+        {
+            gameTimer.Stop();
         }
     }
 }
