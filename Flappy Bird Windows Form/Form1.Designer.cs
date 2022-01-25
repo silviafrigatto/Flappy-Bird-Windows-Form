@@ -93,7 +93,7 @@
             this.scoreText.AutoSize = true;
             this.scoreText.BackColor = System.Drawing.Color.WhiteSmoke;
             this.scoreText.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.scoreText.Location = new System.Drawing.Point(285, 42);
+            this.scoreText.Location = new System.Drawing.Point(147, 505);
             this.scoreText.Name = "scoreText";
             this.scoreText.Size = new System.Drawing.Size(131, 33);
             this.scoreText.TabIndex = 4;
@@ -152,13 +152,14 @@
             this.quitButton.Size = new System.Drawing.Size(66, 33);
             this.quitButton.TabIndex = 7;
             this.quitButton.Text = "Quit";
+            this.quitButton.Click += new System.EventHandler(this.quitButton_Click);
             // 
             // highestScoreText
             // 
             this.highestScoreText.AutoSize = true;
             this.highestScoreText.BackColor = System.Drawing.Color.WhiteSmoke;
             this.highestScoreText.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.highestScoreText.Location = new System.Drawing.Point(231, 0);
+            this.highestScoreText.Location = new System.Drawing.Point(305, 505);
             this.highestScoreText.Name = "highestScoreText";
             this.highestScoreText.Size = new System.Drawing.Size(242, 33);
             this.highestScoreText.TabIndex = 7;

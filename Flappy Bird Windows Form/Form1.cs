@@ -119,5 +119,12 @@ namespace Flappy_Bird_Windows_Form
             pipeTop.Location = new Point(538, -36);
             pipeBottom.Location = new Point(404, 336);
         }
+
+
+        // Quit game
+        private void quitButton_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
     }
 }
