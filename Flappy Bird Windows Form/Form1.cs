@@ -106,6 +106,8 @@ namespace Flappy_Bird_Windows_Form
             }    
         }
 
+        
+        // Reseting the game
         private void restartButton_Click(object sender, EventArgs e)
         {
             gameTimer.Start();
