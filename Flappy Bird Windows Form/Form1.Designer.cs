@@ -36,10 +36,15 @@
             this.scoreText = new System.Windows.Forms.Label();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
             this.gameOverText = new System.Windows.Forms.Label();
+            this.endMenu = new System.Windows.Forms.GroupBox();
+            this.restartButton = new System.Windows.Forms.Label();
+            this.quitButton = new System.Windows.Forms.Label();
+            this.highestScoreText = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.flappyBird)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pipeTop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pipeBottom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ground)).BeginInit();
+            this.endMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // flappyBird
@@ -88,7 +93,7 @@
             this.scoreText.AutoSize = true;
             this.scoreText.BackColor = System.Drawing.Color.WhiteSmoke;
             this.scoreText.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.scoreText.Location = new System.Drawing.Point(0, 0);
+            this.scoreText.Location = new System.Drawing.Point(285, 42);
             this.scoreText.Name = "scoreText";
             this.scoreText.Size = new System.Drawing.Size(131, 33);
             this.scoreText.TabIndex = 4;
@@ -103,13 +108,61 @@
             // gameOverText
             // 
             this.gameOverText.AutoSize = true;
-            this.gameOverText.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.gameOverText.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gameOverText.Location = new System.Drawing.Point(257, 221);
+            this.gameOverText.BackColor = System.Drawing.Color.Orange;
+            this.gameOverText.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gameOverText.Location = new System.Drawing.Point(16, 25);
             this.gameOverText.Name = "gameOverText";
-            this.gameOverText.Size = new System.Drawing.Size(206, 39);
+            this.gameOverText.Size = new System.Drawing.Size(372, 73);
             this.gameOverText.TabIndex = 5;
             this.gameOverText.Text = "Game Over";
+            // 
+            // endMenu
+            // 
+            this.endMenu.BackColor = System.Drawing.Color.Orange;
+            this.endMenu.Controls.Add(this.quitButton);
+            this.endMenu.Controls.Add(this.restartButton);
+            this.endMenu.Controls.Add(this.gameOverText);
+            this.endMenu.Location = new System.Drawing.Point(153, 108);
+            this.endMenu.Name = "endMenu";
+            this.endMenu.Size = new System.Drawing.Size(394, 292);
+            this.endMenu.TabIndex = 6;
+            this.endMenu.TabStop = false;
+            // 
+            // restartButton
+            // 
+            this.restartButton.AutoSize = true;
+            this.restartButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.restartButton.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.restartButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.restartButton.Location = new System.Drawing.Point(147, 134);
+            this.restartButton.Name = "restartButton";
+            this.restartButton.Size = new System.Drawing.Size(105, 33);
+            this.restartButton.TabIndex = 6;
+            this.restartButton.Text = "Restart";
+            this.restartButton.Click += new System.EventHandler(this.restartButton_Click);
+            // 
+            // quitButton
+            // 
+            this.quitButton.AutoSize = true;
+            this.quitButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.quitButton.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.quitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quitButton.Location = new System.Drawing.Point(166, 191);
+            this.quitButton.Name = "quitButton";
+            this.quitButton.Size = new System.Drawing.Size(66, 33);
+            this.quitButton.TabIndex = 7;
+            this.quitButton.Text = "Quit";
+            // 
+            // highestScoreText
+            // 
+            this.highestScoreText.AutoSize = true;
+            this.highestScoreText.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.highestScoreText.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.highestScoreText.Location = new System.Drawing.Point(231, 0);
+            this.highestScoreText.Name = "highestScoreText";
+            this.highestScoreText.Size = new System.Drawing.Size(242, 33);
+            this.highestScoreText.TabIndex = 7;
+            this.highestScoreText.Text = "Highest score: 0";
             // 
             // gameScreen
             // 
@@ -117,11 +170,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(678, 547);
+            this.Controls.Add(this.highestScoreText);
+            this.Controls.Add(this.endMenu);
             this.Controls.Add(this.scoreText);
             this.Controls.Add(this.ground);
             this.Controls.Add(this.pipeTop);
             this.Controls.Add(this.pipeBottom);
-            this.Controls.Add(this.gameOverText);
             this.Controls.Add(this.flappyBird);
             this.Name = "gameScreen";
             this.Text = "Flappy Bird";
@@ -131,6 +185,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pipeTop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pipeBottom)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ground)).EndInit();
+            this.endMenu.ResumeLayout(false);
+            this.endMenu.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,6 +201,10 @@
         private System.Windows.Forms.Label scoreText;
         private System.Windows.Forms.Timer gameTimer;
         private System.Windows.Forms.Label gameOverText;
+        private System.Windows.Forms.GroupBox endMenu;
+        private System.Windows.Forms.Label quitButton;
+        private System.Windows.Forms.Label restartButton;
+        private System.Windows.Forms.Label highestScoreText;
     }
 }
 
