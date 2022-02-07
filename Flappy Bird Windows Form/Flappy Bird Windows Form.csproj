@@ -54,6 +54,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="startScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="startScreen.Designer.cs">
+      <DependentUpon>startScreen.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -67,6 +73,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="startScreen.resx">
+      <DependentUpon>startScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -91,6 +100,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pipedown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngkit_flappy-bird-png_1516185.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PikPng.com_flappy-bird-png_1341072.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flappy bird backgorund.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Start-button-sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\game-over-sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Start-button-sprite1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help-button-sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Restart-button-sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quit-button-sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\About-button-sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HowToPlay-button-sprite.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

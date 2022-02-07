@@ -38,8 +38,8 @@ namespace Flappy_Bird_Windows_Form
 
             // Displying the score
 
-            scoreText.Text = "Score: " + score.ToString();
-            highestScoreText.Text = "Highest score: " + highestScore.ToString();
+            scoreText.Text = /*"Score: " + */score.ToString();
+            highestScoreText.Text = "Best score: " + highestScore.ToString();
 
             // Spawning the pipes
 
@@ -98,17 +98,18 @@ namespace Flappy_Bird_Windows_Form
 
         private void endGame()
         {
-            gameTimer.Stop();
-            endMenu.Show();
-            if(score > highestScore)
+            if (score > highestScore)
             {
                 highestScore = score;
-            }    
+            }
+            gameTimer.Stop();
+            endMenu.Show();
+               
         }
 
-        
+
         // Reseting the game
-        private void restartButton_Click(object sender, EventArgs e)
+        private void restart_Click_1(object sender, EventArgs e)
         {
             gameTimer.Start();
             score = 0;
@@ -120,9 +121,8 @@ namespace Flappy_Bird_Windows_Form
             pipeBottom.Location = new Point(404, 336);
         }
 
-
         // Quit game
-        private void quitButton_Click(object sender, EventArgs e)
+        private void quit_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.Exit();
         }

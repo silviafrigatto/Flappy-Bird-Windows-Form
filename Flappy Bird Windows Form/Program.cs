@@ -16,7 +16,7 @@ namespace Flappy_Bird_Windows_Form
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new gameScreen());
+            Application.Run(new startScreen());
         }
     }
 }
