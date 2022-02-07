@@ -28,6 +28,7 @@ namespace Flappy_Bird_Windows_Form
         {
             aboutScreen aboutWindow = new aboutScreen();
             aboutWindow.Show();
+            this.Hide();
         }
     }
 }
