@@ -20,9 +20,14 @@ namespace Flappy_Bird_Windows_Form
         private void loadGame(object sender, EventArgs e)
         {
             gameScreen gameWindow = new gameScreen();
-
             gameWindow.Show();
 
+        }
+
+        private void loadAbout(object sender, EventArgs e)
+        {
+            aboutScreen aboutWindow = new aboutScreen();
+            aboutWindow.Show();
         }
     }
 }

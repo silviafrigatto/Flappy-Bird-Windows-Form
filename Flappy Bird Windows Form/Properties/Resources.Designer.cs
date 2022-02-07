@@ -143,6 +143,16 @@ namespace Flappy_Bird_Windows_Form.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Menu_button_sprite {
+            get {
+                object obj = ResourceManager.GetObject("Menu-button-sprite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PikPng_com_flappy_bird_png_1341072 {
             get {
                 object obj = ResourceManager.GetObject("PikPng.com_flappy-bird-png_1341072", resourceCulture);

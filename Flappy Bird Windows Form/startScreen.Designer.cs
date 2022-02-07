@@ -118,6 +118,7 @@
             this.about.Size = new System.Drawing.Size(170, 62);
             this.about.TabIndex = 6;
             this.about.UseVisualStyleBackColor = true;
+            this.about.Click += new System.EventHandler(this.loadAbout);
             // 
             // pictureBox4
             // 
