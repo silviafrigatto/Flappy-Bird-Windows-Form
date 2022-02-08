@@ -16,7 +16,7 @@ namespace Flappy_Bird_Windows_Form
         // Game variables
 
         int pipeSpeed = 8;
-        int enemySpeed = 16;
+        int enemySpeed = 12;
         int gravity = 10;
         int score = 0;
         int highestScore = 0;
@@ -65,7 +65,7 @@ namespace Flappy_Bird_Windows_Form
 
             if(enemy.Left < -100)
             {
-                enemy.Left = 720;
+                enemy.Left = 2500;
             }
 
             // Increasing game speed
@@ -81,7 +81,9 @@ namespace Flappy_Bird_Windows_Form
 
             if (flappyBird.Bounds.IntersectsWith(pipeBottom.Bounds) ||
                flappyBird.Bounds.IntersectsWith(pipeTop.Bounds) ||
-               flappyBird.Bounds.IntersectsWith(ground.Bounds))
+               flappyBird.Bounds.IntersectsWith(ground.Bounds) ||
+               flappyBird.Bounds.IntersectsWith(limit.Bounds) ||
+               flappyBird.Bounds.IntersectsWith(enemy.Bounds))
             {
                 endGame();
             }
@@ -114,6 +116,7 @@ namespace Flappy_Bird_Windows_Form
         {
             
             gameTimer.Stop();
+            flappyBird.Hide();
             enemy.Hide();
             endMenu.Show();
                
@@ -127,8 +130,11 @@ namespace Flappy_Bird_Windows_Form
             score = 0;
             counter = 1;
             pipeSpeed = 8;
+            enemySpeed = 12;
             endMenu.Hide();
+            flappyBird.Show();
             enemy.Show();
+            enemy.Location = new Point(2500, 242);
             flappyBird.Location = new Point(27, 189);
             pipeTop.Location = new Point(538, -36);
             pipeBottom.Location = new Point(404, 336);
@@ -144,7 +150,7 @@ namespace Flappy_Bird_Windows_Form
         {
             startScreen startWindow = new startScreen();
             startWindow.Show();
-            this.Close();
+            this.Hide();
         }
     }
 }

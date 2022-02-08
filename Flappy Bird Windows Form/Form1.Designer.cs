@@ -41,8 +41,9 @@
             this.pipeTop = new System.Windows.Forms.PictureBox();
             this.pipeBottom = new System.Windows.Forms.PictureBox();
             this.flappyBird = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.background = new System.Windows.Forms.PictureBox();
             this.enemy = new System.Windows.Forms.PictureBox();
+            this.limit = new System.Windows.Forms.PictureBox();
             this.endMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quit)).BeginInit();
@@ -52,8 +53,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pipeTop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pipeBottom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flappyBird)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.background)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemy)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.limit)).BeginInit();
             this.SuspendLayout();
             // 
             // scoreText
@@ -188,27 +190,36 @@
             this.flappyBird.TabIndex = 0;
             this.flappyBird.TabStop = false;
             // 
-            // pictureBox2
+            // background
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(-10, -3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(696, 495);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
+            this.background.BackColor = System.Drawing.Color.Transparent;
+            this.background.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.background.Location = new System.Drawing.Point(-10, -5);
+            this.background.Name = "background";
+            this.background.Size = new System.Drawing.Size(696, 497);
+            this.background.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.background.TabIndex = 8;
+            this.background.TabStop = false;
             // 
             // enemy
             // 
             this.enemy.BackColor = System.Drawing.Color.Transparent;
             this.enemy.Image = global::Flappy_Bird_Windows_Form.Properties.Resources.enemy;
-            this.enemy.Location = new System.Drawing.Point(667, 242);
+            this.enemy.Location = new System.Drawing.Point(2500, 242);
             this.enemy.Name = "enemy";
             this.enemy.Size = new System.Drawing.Size(72, 58);
             this.enemy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.enemy.TabIndex = 9;
             this.enemy.TabStop = false;
+            // 
+            // limit
+            // 
+            this.limit.BackColor = System.Drawing.Color.Transparent;
+            this.limit.Location = new System.Drawing.Point(27, -5);
+            this.limit.Name = "limit";
+            this.limit.Size = new System.Drawing.Size(54, 11);
+            this.limit.TabIndex = 10;
+            this.limit.TabStop = false;
             // 
             // gameScreen
             // 
@@ -218,6 +229,7 @@
             this.BackgroundImage = global::Flappy_Bird_Windows_Form.Properties.Resources.flappy_bird_backgorund;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(678, 547);
+            this.Controls.Add(this.limit);
             this.Controls.Add(this.endMenu);
             this.Controls.Add(this.enemy);
             this.Controls.Add(this.scoreText);
@@ -225,7 +237,7 @@
             this.Controls.Add(this.pipeTop);
             this.Controls.Add(this.pipeBottom);
             this.Controls.Add(this.flappyBird);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.background);
             this.Name = "gameScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Flappy Bird";
@@ -240,8 +252,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pipeTop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pipeBottom)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.flappyBird)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.background)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemy)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.limit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,9 +273,10 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox restart;
         private System.Windows.Forms.PictureBox quit;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox background;
         private System.Windows.Forms.PictureBox menu;
         private System.Windows.Forms.PictureBox enemy;
+        private System.Windows.Forms.PictureBox limit;
     }
 }
 
