@@ -126,5 +126,12 @@ namespace Flappy_Bird_Windows_Form
         {
             System.Windows.Forms.Application.Exit();
         }
+
+        private void menu_Click(object sender, EventArgs e)
+        {
+            startScreen startWindow = new startScreen();
+            startWindow.Show();
+            this.Close();
+        }
     }
 }

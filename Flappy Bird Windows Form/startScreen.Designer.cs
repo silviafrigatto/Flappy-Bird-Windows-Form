@@ -59,7 +59,7 @@
             this.button1.BackgroundImage = global::Flappy_Bird_Windows_Form.Properties.Resources.Start_button_sprite1;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Font = new System.Drawing.Font("Whimsy TT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(92, 237);
+            this.button1.Location = new System.Drawing.Point(114, 242);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(172, 62);
             this.button1.TabIndex = 2;
@@ -72,7 +72,7 @@
             this.button2.BackgroundImage = global::Flappy_Bird_Windows_Form.Properties.Resources.HowToPlay_button_sprite;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.Font = new System.Drawing.Font("Whimsy TT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(92, 314);
+            this.button2.Location = new System.Drawing.Point(114, 319);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(172, 62);
             this.button2.TabIndex = 3;
@@ -82,7 +82,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::Flappy_Bird_Windows_Form.Properties.Resources.bird;
-            this.pictureBox2.Location = new System.Drawing.Point(470, 258);
+            this.pictureBox2.Location = new System.Drawing.Point(464, 249);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(68, 54);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -113,7 +113,7 @@
             // 
             this.about.BackgroundImage = global::Flappy_Bird_Windows_Form.Properties.Resources.About_button_sprite;
             this.about.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.about.Location = new System.Drawing.Point(92, 393);
+            this.about.Location = new System.Drawing.Point(114, 398);
             this.about.Name = "about";
             this.about.Size = new System.Drawing.Size(170, 62);
             this.about.TabIndex = 6;
@@ -124,7 +124,7 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = global::Flappy_Bird_Windows_Form.Properties.Resources.pipe;
-            this.pictureBox4.Location = new System.Drawing.Point(447, 361);
+            this.pictureBox4.Location = new System.Drawing.Point(441, 352);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(113, 192);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

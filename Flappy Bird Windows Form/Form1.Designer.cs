@@ -32,16 +32,18 @@
             this.scoreText = new System.Windows.Forms.Label();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
             this.endMenu = new System.Windows.Forms.GroupBox();
+            this.menu = new System.Windows.Forms.PictureBox();
+            this.highestScoreText = new System.Windows.Forms.Label();
             this.quit = new System.Windows.Forms.PictureBox();
             this.restart = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.highestScoreText = new System.Windows.Forms.Label();
             this.ground = new System.Windows.Forms.PictureBox();
             this.pipeTop = new System.Windows.Forms.PictureBox();
             this.pipeBottom = new System.Windows.Forms.PictureBox();
             this.flappyBird = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.endMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.menu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.restart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -58,7 +60,7 @@
             this.scoreText.BackColor = System.Drawing.Color.WhiteSmoke;
             this.scoreText.Font = new System.Drawing.Font("Whimsy TT", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.scoreText.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.scoreText.Location = new System.Drawing.Point(326, 9);
+            this.scoreText.Location = new System.Drawing.Point(328, 9);
             this.scoreText.Name = "scoreText";
             this.scoreText.Size = new System.Drawing.Size(48, 45);
             this.scoreText.TabIndex = 4;
@@ -74,20 +76,44 @@
             // endMenu
             // 
             this.endMenu.BackColor = System.Drawing.Color.DarkKhaki;
+            this.endMenu.Controls.Add(this.menu);
             this.endMenu.Controls.Add(this.highestScoreText);
             this.endMenu.Controls.Add(this.quit);
             this.endMenu.Controls.Add(this.restart);
             this.endMenu.Controls.Add(this.pictureBox1);
             this.endMenu.Location = new System.Drawing.Point(144, 98);
             this.endMenu.Name = "endMenu";
-            this.endMenu.Size = new System.Drawing.Size(406, 304);
+            this.endMenu.Size = new System.Drawing.Size(406, 374);
             this.endMenu.TabIndex = 6;
             this.endMenu.TabStop = false;
+            // 
+            // menu
+            // 
+            this.menu.Image = global::Flappy_Bird_Windows_Form.Properties.Resources.Menu_button_sprite;
+            this.menu.Location = new System.Drawing.Point(122, 228);
+            this.menu.Name = "menu";
+            this.menu.Size = new System.Drawing.Size(172, 62);
+            this.menu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.menu.TabIndex = 11;
+            this.menu.TabStop = false;
+            this.menu.Click += new System.EventHandler(this.menu_Click);
+            // 
+            // highestScoreText
+            // 
+            this.highestScoreText.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.highestScoreText.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.highestScoreText.Font = new System.Drawing.Font("Whimsy TT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.highestScoreText.Location = new System.Drawing.Point(122, 121);
+            this.highestScoreText.Name = "highestScoreText";
+            this.highestScoreText.Size = new System.Drawing.Size(172, 25);
+            this.highestScoreText.TabIndex = 7;
+            this.highestScoreText.Text = "Best score: 0";
+            this.highestScoreText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // quit
             // 
             this.quit.Image = global::Flappy_Bird_Windows_Form.Properties.Resources.Quit_button_sprite;
-            this.quit.Location = new System.Drawing.Point(122, 228);
+            this.quit.Location = new System.Drawing.Point(122, 296);
             this.quit.Name = "quit";
             this.quit.Size = new System.Drawing.Size(172, 62);
             this.quit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -115,18 +141,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
-            // 
-            // highestScoreText
-            // 
-            this.highestScoreText.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.highestScoreText.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.highestScoreText.Font = new System.Drawing.Font("Whimsy TT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.highestScoreText.Location = new System.Drawing.Point(122, 121);
-            this.highestScoreText.Name = "highestScoreText";
-            this.highestScoreText.Size = new System.Drawing.Size(172, 25);
-            this.highestScoreText.TabIndex = 7;
-            this.highestScoreText.Text = "Best score: 0";
-            this.highestScoreText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ground
             // 
@@ -203,6 +217,7 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gameKeyIsDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gameKeyIsUp);
             this.endMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.menu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.restart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -230,6 +245,7 @@
         private System.Windows.Forms.PictureBox restart;
         private System.Windows.Forms.PictureBox quit;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox menu;
     }
 }
 

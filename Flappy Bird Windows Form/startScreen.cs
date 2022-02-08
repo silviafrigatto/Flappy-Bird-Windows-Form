@@ -21,6 +21,7 @@ namespace Flappy_Bird_Windows_Form
         {
             gameScreen gameWindow = new gameScreen();
             gameWindow.Show();
+            this.Hide();
 
         }
 
