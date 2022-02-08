@@ -28,20 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(aboutScreen));
             this.label1 = new System.Windows.Forms.Label();
             this.menu = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Whimsy TT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, 38);
+            this.label1.Location = new System.Drawing.Point(52, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(404, 78);
+            this.label1.Size = new System.Drawing.Size(594, 280);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Hi!\r\n\r\nWrite something about the game\r\n";
+            this.label1.Text = resources.GetString("label1.Text");
             // 
             // menu
             // 
@@ -54,6 +56,17 @@
             this.menu.UseVisualStyleBackColor = true;
             this.menu.Click += new System.EventHandler(this.loadMenu);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::Flappy_Bird_Windows_Form.Properties.Resources.bird;
+            this.pictureBox1.Location = new System.Drawing.Point(305, 325);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(78, 57);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // aboutScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -61,12 +74,14 @@
             this.BackgroundImage = global::Flappy_Bird_Windows_Form.Properties.Resources.flappy_bird_backgorund;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(678, 547);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menu);
             this.Controls.Add(this.label1);
             this.Name = "aboutScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "aboutScreen";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -74,5 +89,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button menu;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

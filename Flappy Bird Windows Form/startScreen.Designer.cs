@@ -56,7 +56,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::Flappy_Bird_Windows_Form.Properties.Resources.Start_button_sprite1;
+            this.button1.BackgroundImage = global::Flappy_Bird_Windows_Form.Properties.Resources.Start_button_sprite11;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Font = new System.Drawing.Font("Whimsy TT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(114, 242);
@@ -77,6 +77,7 @@
             this.button2.Size = new System.Drawing.Size(172, 62);
             this.button2.TabIndex = 3;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.loadHowToPlay);
             // 
             // pictureBox2
             // 
@@ -147,6 +148,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox4);
             this.Name = "startScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "startScreen";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

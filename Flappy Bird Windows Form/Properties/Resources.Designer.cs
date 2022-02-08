@@ -83,6 +83,16 @@ namespace Flappy_Bird_Windows_Form.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap enemy {
+            get {
+                object obj = ResourceManager.GetObject("enemy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap flappy_bird_backgorund {
             get {
                 object obj = ResourceManager.GetObject("flappy bird backgorund", resourceCulture);
@@ -226,6 +236,16 @@ namespace Flappy_Bird_Windows_Form.Properties {
         internal static System.Drawing.Bitmap Start_button_sprite1 {
             get {
                 object obj = ResourceManager.GetObject("Start-button-sprite1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Start_button_sprite11 {
+            get {
+                object obj = ResourceManager.GetObject("Start-button-sprite11", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

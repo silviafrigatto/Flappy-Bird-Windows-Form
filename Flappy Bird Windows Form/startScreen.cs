@@ -31,5 +31,12 @@ namespace Flappy_Bird_Windows_Form
             aboutWindow.Show();
             this.Hide();
         }
+
+        private void loadHowToPlay(object sender, EventArgs e)
+        {
+            howtoplayScreen howtoplayWindow = new howtoplayScreen();
+            howtoplayWindow.Show();
+            this.Hide();
+        }
     }
 }
